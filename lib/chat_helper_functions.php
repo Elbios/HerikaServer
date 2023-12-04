@@ -357,6 +357,12 @@ function returnLines($lines,$writeOutput=true)
 
             }
 
+            if ($GLOBALS["TTSFUNCTION"] == "xtts2") {
+
+                require_once(__DIR__."/../tts/tts-xtts2.php");
+                $GLOBALS["TRACK"]["FILES_GENERATED"][]=tts($responseTextUnmooded, $mood, $responseText);
+
+            }
 
             if ($GLOBALS["TTSFUNCTION"] == "xvasynth") {
 
