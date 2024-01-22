@@ -164,7 +164,7 @@
       "_title":"OpenAI's Whisper Speech-to-Text",
       "LANG": {"type":"string","description":"Language to detect for STT."},
       "TRANSLATE": {"type":"boolean","description":"Will try to translate to english."},
-      "URL": {"type":"url","endpoint":"Endpoint URL"},
+      "URL": {"type":"url","description":"Fill in if running whispercpp on your own server. Example: http://your-local-ip:8070/inference"},
       "API_KEY": {"type":"apikey","description":"OpenAI API key. Same used for OpenAI/ChatGPT AI service.","code":"OPENAI_API_KEY"}
     },
     "AZURE": {

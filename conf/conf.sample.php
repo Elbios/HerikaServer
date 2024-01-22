@@ -66,7 +66,7 @@ $STT["AZURE"]["profanity"]="masked";
 $STT["WHISPER"]["LANG"]="en";
 $STT["WHISPER"]["API_KEY"]="";
 $STT["WHISPER"]["TRANSLATE"]=false;
-$STT["WHISPER"]["URL"]=""; //End point
+$STT["WHISPER"]["URL"]=""; //End point, must end with /inference
 
 
 $ITT["AZURE"]["ENDPOINT"]="";			
