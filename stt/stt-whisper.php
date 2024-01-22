@@ -13,12 +13,16 @@ function stt($file)
     $GLOBALS["db"] = new sql();
     
     $additionalKeywords=lastKeyWords(30,["chat","chatme"]);
-    
-    if ($GLOBALS["STT"]["WHISPER"]["TRANSLATE"])
-        $url = "https://api.openai.com/v1/audio/translations";
-    else
-        $url = "https://api.openai.com/v1/audio/transcriptions";
-    
+
+    if (!empty($GLOBALS["STT"]["WHISPER"]["URL"])) {
+        $url = $GLOBALS["STT"]["WHISPER"]["URL"];
+    } else {
+	    if ($GLOBALS["STT"]["WHISPER"]["TRANSLATE"])
+		$url = "https://api.openai.com/v1/audio/translations";
+	    else
+		$url = "https://api.openai.com/v1/audio/transcriptions";
+    }
+
     $lang=(isset($GLOBALS["STT"]["WHISPER"]["LANG"]))?$GLOBALS["STT"]["WHISPER"]["LANG"]:"en";
 
     $filePath = $file;
