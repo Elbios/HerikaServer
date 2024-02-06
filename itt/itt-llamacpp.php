@@ -14,8 +14,9 @@ function itt($file,$hints)
 
     // Define the POST data as an associative array
     $postData = [
-        'prompt' => "USER:Context, roleplay In Skyrim universe, {$GLOBALS["HERIKA_NAME"]} watchs this scene:[img-1]. 
-        Hints: $hints. Describe the vision while keeping roleplay.Describe COLORS and SHAPES.\nASSISTANT:",
+        'prompt' => "Describe the view.",
+        //'prompt' => "USER:Context, roleplay In Skyrim universe, {$GLOBALS["HERIKA_NAME"]} watchs this scene:[img-1]. 
+        //Hints: $hints. Describe the vision while keeping roleplay.Describe COLORS and SHAPES.\nASSISTANT:",
         'n_predict' => 256,
         'image_data' => [["data"=>$base64Encoded,"id"=>1]],
         'ignore_eos' => false,
